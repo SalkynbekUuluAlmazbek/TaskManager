@@ -7,22 +7,29 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.geeks.taskmanager.databinding.ItemTaskBinding
 import com.geeks.taskmanager.model.Task
 
-class TaskAdapter:Adapter<TaskAdapter.TaskViewHolder> () {
+class TaskAdapter : Adapter<TaskAdapter.TaskViewHolder>() {
 
     private val list = arrayListOf<Task>()
 
     fun setTask(task: Task) {
-        list.add(0,task)
+        list.add(0, task)
         notifyDataSetChanged()
     }
 
+    fun setTasks(tasks: List<Task>) {
+        list.clear()
+        list.addAll(tasks)
+        notifyDataSetChanged()
+    }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         return TaskViewHolder(
             ItemTaskBinding.inflate(
                 LayoutInflater.from(parent.context),
-                parent,false))
+                parent, false
+            )
+        )
     }
 
     override fun getItemCount(): Int = list.size
@@ -31,7 +38,7 @@ class TaskAdapter:Adapter<TaskAdapter.TaskViewHolder> () {
         holder.bind(list[position])
     }
 
-    inner class TaskViewHolder(private val binding:ItemTaskBinding):ViewHolder(binding.root) {
+    inner class TaskViewHolder(private val binding: ItemTaskBinding) : ViewHolder(binding.root) {
         fun bind(task: Task) = with(binding) {
 
             textViewTitle.text = task.title
