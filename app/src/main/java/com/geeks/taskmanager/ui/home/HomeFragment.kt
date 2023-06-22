@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    private val adapter = TaskAdapter()
+    private val adapter by lazy { TaskAdapter(requireContext()) }
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -39,6 +39,8 @@ class HomeFragment : Fragment() {
 
         val list = App.db.taskDao().getAll()
         adapter.setTasks(list)
+
+
         binding.bottomFab.setOnClickListener {
             findNavController().navigate(R.id.taskFragment)
 
