@@ -37,4 +37,9 @@
         android:name="com.geeks.taskmanager.ui.onboarding.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/taskUpdateFragment"
+        android:name="com.geeks.taskmanager.ui.task.TaskUpdateFragment"
+        android:label="@string/update"
+        tools:layout="@layout/fragment_task_update" />
 </navigation>
