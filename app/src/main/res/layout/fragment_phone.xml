@@ -6,24 +6,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.auth.phone.PhoneFragment">
 
-    <EditText
-        android:id="@+id/phone"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputCountryCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="64dp"
-        android:hint="@string/sendPhoneNumber"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:prefixText="@string/country_number"
+        app:prefixTextColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:maxLength="9"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/inputCountryCode"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
 
     <Button
         android:id="@+id/bottomSend"
         android:text="@string/sendCode"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/addNumber"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

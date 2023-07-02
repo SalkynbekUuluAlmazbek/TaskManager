@@ -13,4 +13,5 @@
     <string name="sendCode">Отправить код</string>
     <string name="SMS">Введите код с СМС</string>
     <string name="accept">Подтвердить</string>
+    <string name="country_number">+996</string>
 </resources>

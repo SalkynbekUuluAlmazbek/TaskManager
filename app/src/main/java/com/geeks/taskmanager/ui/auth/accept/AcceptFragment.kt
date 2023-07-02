@@ -34,7 +34,7 @@ class AcceptFragment : Fragment() {
         val verId: String? = arguments?.getString(PhoneFragment.VER_KEY)
         binding.bottomAccept.setOnClickListener {
             val credential =
-                PhoneAuthProvider.getCredential(verId.toString(), binding.code.text.toString())
+                PhoneAuthProvider.getCredential(verId.toString(), binding.verifyBlock.textEntered.toString())
             signInWithPhoneAuthCredential(credential)
         }
     }

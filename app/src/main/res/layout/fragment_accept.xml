@@ -6,24 +6,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.auth.phone.PhoneFragment">
 
-    <EditText
-        android:id="@+id/code"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="64dp"
-        android:hint="@string/SMS"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<com.shalan.mohamed.verificationview.VerifyView
+    android:id="@+id/verifyBlock"
+    android:layout_marginTop="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:num_of_blocks="6"
+    android:gravity="center_horizontal"
+    android:tooltipText="-"
+    android:layout_width="match_parent"
+    app:blocks_text_color="@color/black"
+    android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/bottomAccept"
         android:text="@string/accept"
-        app:layout_constraintTop_toBottomOf="@+id/code"
+        app:layout_constraintTop_toBottomOf="@+id/verifyBlock"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
