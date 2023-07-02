@@ -38,7 +38,7 @@ class OnBoardingFragment : Fragment() {
 
         private fun onClick() {
             pref.saveSeen()
-            findNavController().navigateUp()
+            findNavController().navigate(R.id.action_to_mobile_navigation)
         }
 
 

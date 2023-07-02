@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/phoneFragment"
+    android:id="@+id/auth_navigation">
+
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.geeks.taskmanager.ui.auth.phone.PhoneFragment"
+        android:label="fragment_phone"
+        tools:layout="@layout/fragment_phone" />
+    <fragment
+        android:id="@+id/acceptFragment"
+        tools:layout="@layout/fragment_accept"
+        android:name="com.geeks.taskmanager.ui.auth.accept.AcceptFragment"
+        android:label="AcceptFragment" />
+
+</navigation>

@@ -9,4 +9,8 @@
     <string name="ok">ok</string>
     <string name="cancel">cancel</string>
     <string name="update">update</string>
+    <string name="sendPhoneNumber">Введите номер телефона</string>
+    <string name="sendCode">Отправить код</string>
+    <string name="SMS">Введите код с СМС</string>
+    <string name="accept">Подтвердить</string>
 </resources>
